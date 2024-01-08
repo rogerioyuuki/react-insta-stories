@@ -130,6 +130,7 @@ export default function () {
 
   const debouncePause = (e: React.MouseEvent | React.TouchEvent) => {
     e.preventDefault();
+    toggleState("play"); // ensure it can go to the previous when stories end
     mousedownId.current = setTimeout(() => {
       toggleState("pause");
     }, 200);
@@ -141,6 +142,7 @@ export default function () {
       mousedownId.current && clearTimeout(mousedownId.current);
       if (pause) {
         toggleState("play");
+        if (type === "previous") previous();
       } else {
         type === "next" ? next({ isSkippedByUser: true }) : previous();
       }
