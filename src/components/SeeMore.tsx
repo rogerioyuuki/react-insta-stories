@@ -32,11 +32,11 @@ export default function seeMore(props: SeeMoreProps) {
 
     return (
         props.showContent
-            ? <div style={styles.seeMoreExpanded}>
+            ? <div className="see-more-container" style={styles.seeMoreExpanded}>
                 <SeeMoreContent close={() => props.toggleMore(false)} />
             </div>
             :
-            (CustomCollapsed ? <CustomCollapsed action={props.action} toggleMore={props.toggleMore} /> : <div style={styles.seeMore} onClick={(e) => {
+            (CustomCollapsed ? <CustomCollapsed action={props.action} toggleMore={props.toggleMore} /> : <div className="see-more-container" style={styles.seeMore} onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 props.toggleMore(true)

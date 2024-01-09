@@ -153,7 +153,7 @@ export default function () {
   };
 
   return (
-    <div
+    <div className="react-insta-stories-container"
       style={{
         ...styles.container,
         ...storyContainerStyles,

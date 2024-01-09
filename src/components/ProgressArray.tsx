@@ -81,7 +81,7 @@ export default () => {
   };
 
   return (
-    <div style={{
+    <div className="progress-container" style={{
       ...styles.progressArr,
       ...progressContainerStyles,
       ...opacityStyles

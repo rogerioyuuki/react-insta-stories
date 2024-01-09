@@ -37,7 +37,7 @@ const Story = (props: StoryProps) => {
   };
 
   return (
-    <div
+    <div className="story-container"
       style={{
         ...styles.story,
         ...storyInnerContainerStyles,

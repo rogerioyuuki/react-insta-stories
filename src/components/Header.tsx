@@ -2,7 +2,7 @@ import React from "react";
 import { HeaderProps } from "./../interfaces";
 
 const Header = ({ profileImage, heading, subheading }: HeaderProps) => (
-  <div style={styles.main}>
+  <div className="header-container" style={styles.main}>
     {profileImage && <img style={styles.img} src={profileImage} />}
     <span style={styles.text}>
       <p style={styles.heading}>{heading}</p>
