@@ -13,7 +13,7 @@ export default (props: ProgressProps) => {
             case 2:
                 return { width: '100%' }
             case 1:
-                return { transform: `scaleX(${props.count / 100})` }
+                return { transform: `scaleX(${Math.min(props.count, 100) / 100})` }
             case 0:
                 return { width: 0 }
             default:
