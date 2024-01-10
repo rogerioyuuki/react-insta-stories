@@ -75,5 +75,6 @@ ReactInstaStories.defaultProps = {
 
 export const WithHeader = withHeader;
 export const WithSeeMore = withSeeMore;
+export const getDefaultRenderer = (story) => getRenderer(story, defaultRenderers);
 
 export default ReactInstaStories
